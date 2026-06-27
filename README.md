@@ -2,6 +2,14 @@
 
 This is a repository for a ZMK Firmware for Ergonaut One keyboard.
 
+> **Dongle build**
+> This config is set up for a **3-piece dongle layout**: a third XIAO BLE
+> (the *dongle*) acts as the BLE central and plugs into your computer over USB,
+> while both keyboard halves connect to it as wireless peripherals. The dongle
+> stays connected to the host, so neither half ever talks to the computer
+> directly. See [How to flash the keyboard?](#how-to-flash-the-keyboard) and
+> [How to pair halves?](#how-to-pair-halves) for the dongle-specific steps.
+
 ## Default keymap
 
 Visual representation of the default keymap in keyboard-layout-editor: [KLE](http://www.keyboard-layout-editor.com/#/gists/13d0f7ae7a8b5835efcd23d61f50336a)
@@ -45,19 +53,29 @@ You have two options on how to configure your desired keymap:
 ### How to flash the keyboard?
 
 1. Obtain `firmware.zip`
-2. Unzip `firmware.zip` - you should have `ergonaut_one_left-seeeduino_xiao_ble-zmk.uf2` and `ergonaut_one_right-seeeduino_xiao_ble-zmk.uf2` files
-3. Turn off the power for selected halve (move slider to position `OFF`)
-4. Connect selected halve to the PC via USB-C cable
-5. Press `RESET` button **twice** to enter DFU mode - you should see new USB device in your file manager
-6. Copy the corresponding firmware to the root directory of the new USB device
-7. Disconnect selected halve from the PC
-8. Repeat steps 3-7 for the other halve
+2. Unzip `firmware.zip` - you should have these files:
+   - `ergonaut_one_left-xiao_ble-zmk.uf2` – left half
+   - `ergonaut_one_right-xiao_ble-zmk.uf2` – right half
+   - `ergonaut_one_dongle-xiao_ble-zmk.uf2` – dongle (BLE central / USB)
+   - `ergonaut_one_dongle_studio-xiao_ble-zmk.uf2` – dongle with [ZMK Studio](https://zmk.dev/docs/features/studio) enabled (flash this to the dongle instead of the plain one if you want to edit the keymap live)
+   - `settings_reset-xiao_ble-zmk.uf2` – clears stored Bluetooth bonds, see [How to pair halves?](#how-to-pair-halves)
+3. For the device you want to flash, connect it to the PC via USB-C cable (for the halves, turn off the power first by moving the slider to `OFF`)
+4. Press `RESET` button **twice** to enter DFU mode - you should see new USB device in your file manager
+5. Copy the corresponding firmware to the root directory of the new USB device
+6. Disconnect the device from the PC
+7. Repeat steps 3-6 for the remaining devices
+
+Flash all three pieces (`left`, `right`, and one of the `dongle` variants). The dongle is the only piece you keep plugged into the computer.
 
 ### How to pair halves?
 
-1. Turn off the power for both halves (move slider to position `OFF`)
-2. Turn on the power for both halves (move slider to position `ON`)
-3. Press `RESET` button **once** on both halves **simultaneously**
+With the dongle layout, the halves bond to the dongle (not to each other). If the
+pieces won't connect after flashing - or you reflash and pairing breaks - reset
+the stored bonds on all three:
+
+1. Flash `settings_reset-xiao_ble-zmk.uf2` to the dongle and to **both** halves (same DFU steps as above)
+2. Reflash the normal firmware to each piece (`dongle`, `left`, `right`)
+3. Power both halves on and plug the dongle into the PC - they will automatically discover and bond to the dongle
 
 ### Problems
 
