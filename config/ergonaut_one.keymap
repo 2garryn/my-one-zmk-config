@@ -31,7 +31,7 @@
             display-name = "SYM";
             bindings = <
 &kp TILDE         &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3  &kp NUMBER_4  &kp N5      &kp NUMBER_6   &kp N7    &kp N8         &kp N9       &kp N0   &bootloader
-&mt LEFT_ALT TAB  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &kp DELETE  &kp BACKSPACE  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &kp RCTRL
+&mt TAB LEFT_ALT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &kp DELETE  &kp BACKSPACE  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &kp RCTRL
 &kp LSHIFT        &none           &bootloader     &none         &none         &kp INSERT  &kp ESCAPE     &kp N7    &kp N8         &none        &kp N0   &kp RSHIFT
                                                   &trans        &trans        &kp SPACE   &kp ENTER      &mo 3     &kp RIGHT_ALT
             >;
