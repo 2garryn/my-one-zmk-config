@@ -6,9 +6,4 @@ include:
   - board: xiao_ble//zmk
     shield: ergonaut_one_dongle
   - board: xiao_ble//zmk
-    shield: ergonaut_one_dongle
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: ergonaut_one_dongle_studio
-  - board: xiao_ble//zmk
     shield: settings_reset

@@ -57,7 +57,6 @@ You have two options on how to configure your desired keymap:
    - `ergonaut_one_left-xiao_ble-zmk.uf2` – left half
    - `ergonaut_one_right-xiao_ble-zmk.uf2` – right half
    - `ergonaut_one_dongle-xiao_ble-zmk.uf2` – dongle (BLE central / USB)
-   - `ergonaut_one_dongle_studio-xiao_ble-zmk.uf2` – dongle with [ZMK Studio](https://zmk.dev/docs/features/studio) enabled (flash this to the dongle instead of the plain one if you want to edit the keymap live)
    - `settings_reset-xiao_ble-zmk.uf2` – clears stored Bluetooth bonds, see [How to pair halves?](#how-to-pair-halves)
 3. For the device you want to flash, connect it to the PC via USB-C cable (for the halves, turn off the power first by moving the slider to `OFF`)
 4. Press `RESET` button **twice** to enter DFU mode - you should see new USB device in your file manager
@@ -65,7 +64,7 @@ You have two options on how to configure your desired keymap:
 6. Disconnect the device from the PC
 7. Repeat steps 3-6 for the remaining devices
 
-Flash all three pieces (`left`, `right`, and one of the `dongle` variants). The dongle is the only piece you keep plugged into the computer.
+Flash all three pieces (`left`, `right`, and `dongle`). The dongle is the only piece you keep plugged into the computer.
 
 ### How to pair halves?
 
