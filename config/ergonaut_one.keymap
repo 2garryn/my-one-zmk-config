@@ -37,10 +37,10 @@
         lower_layer {
             display-name = "SYM";
             bindings = <
-&mt LGUI F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6     &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5     &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &kp RALT
-                                  &trans    &trans    &trans     &trans     &trans    &trans
+&kp TILDE       &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3  &kp NUMBER_4  &kp N5      &kp NUMBER_6   &kp N7    &kp N8         &kp N9       &kp N0   &none
+&mt LCTRL PLUS  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &kp DELETE  &kp BACKSPACE  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &kp RCTRL
+&kp LSHIFT      &kp N1          &kp N2          &kp N3        &kp N4        &kp INSERT  &kp ESCAPE     &kp N7    &kp N8         &kp N9       &kp N0   &kp RSHIFT
+                                                &trans        &trans        &kp SPACE   &kp ENTER      &trans    &kp RIGHT_ALT
             >;
         };
 
